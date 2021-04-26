@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import './screens/home.dart';
+import './screens/categorias_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,12 +16,26 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Meu Cardápio',
+      title: 'Minhas Receitas',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        accentColor: Colors.blueAccent,
-      ),
-      home: Home(),
+          primarySwatch: Colors.blue,
+          accentColor: Colors.amber,
+          canvasColor: Color.fromRGBO(255, 254, 229, 1),
+          fontFamily: 'Montserrat',
+          textTheme: ThemeData.light().textTheme.copyWith(
+                bodyText1: TextStyle(
+                  color: Color.fromRGBO(20, 51, 51, 1),
+                ),
+                bodyText2: TextStyle(
+                  color: Color.fromRGBO(20, 51, 51, 1),
+                ),
+                headline6: TextStyle(
+                  fontSize: 20,
+                  fontFamily: 'Lato',
+                  fontWeight: FontWeight.bold,
+                ),
+              )),
+      home: CategoriasScreen(),
     );
   }
 }

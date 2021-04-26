@@ -6,5 +6,5 @@ class Categoria {
   final Color cor;
 
   const Categoria(
-      {@required this.id, @required this.nome, this.cor = Colors.orange});
+      {required this.id, required this.nome, this.cor = Colors.orange});
 }
