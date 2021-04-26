@@ -17,9 +17,9 @@ class CategoriasReceitasScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: myAppBar,
-        body: Center(
-          child: Text('Receitas'),
-        ),
+        body: ListView.builder(itemBuilder: (ctx, index) {
+
+        }, itemCount: ,),
       ),
     );
   }
