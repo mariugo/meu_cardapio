@@ -14,12 +14,12 @@ class CategoriaItemWidget extends StatelessWidget {
 
   void escolherCategoria(BuildContext ctx) {
     Navigator.of(ctx).push(
-      MaterialPageRoute(builder: (_) {
-        return CategoriasReceitasScreen(
+      MaterialPageRoute(
+        builder: (_) => CategoriasReceitasScreen(
           categoriaId: id,
           categoriaNome: nome,
-        );
-      }),
+        ),
+      ),
     );
   }
 

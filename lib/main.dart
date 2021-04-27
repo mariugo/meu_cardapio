@@ -36,6 +36,9 @@ class MyApp extends StatelessWidget {
                 ),
               )),
       home: CategoriasScreen(),
+      onGenerateRoute: (settings) {
+        return MaterialPageRoute(builder: (ctx) => CategoriasScreen());
+      },
     );
   }
 }

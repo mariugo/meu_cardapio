@@ -1,6 +1,6 @@
 {
-    "name": "meu_cardapio",
-    "short_name": "meu_cardapio",
+    "name": "minhas_receitas",
+    "short_name": "minhas_receitas",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

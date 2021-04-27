@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../model/dummy_data.dart';
+import '../widgets/receita_item_widget.dart';
 
 class CategoriasReceitasScreen extends StatelessWidget {
   final String categoriaId;
@@ -24,8 +25,14 @@ class CategoriasReceitasScreen extends StatelessWidget {
       child: Scaffold(
         appBar: myAppBar,
         body: ListView.builder(
-          itemBuilder: (ctx, index) =>
-              Text(categoriasReceitas[index].nomeReceita),
+          itemBuilder: (ctx, index) => ReceitaItemWidget(
+            receitaId: categoriasReceitas[index].id,
+            nomeReceita: categoriasReceitas[index].nomeReceita,
+            imageUrlReceita: categoriasReceitas[index].imageUrl,
+            duracaoReceita: categoriasReceitas[index].duracao,
+            complexidadeReceita: categoriasReceitas[index].complexidade,
+            custoReceita: categoriasReceitas[index].custo,
+          ),
           itemCount: categoriasReceitas.length,
         ),
       ),
