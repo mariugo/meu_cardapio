@@ -36,8 +36,8 @@ class MyApp extends StatelessWidget {
                 ),
               )),
       home: CategoriasScreen(),
-      onGenerateRoute: (settings) {
-        return MaterialPageRoute(builder: (ctx) => CategoriasScreen());
+      onUnknownRoute: (settings) {
+        return MaterialPageRoute(builder: (_) => CategoriasScreen());
       },
     );
   }
